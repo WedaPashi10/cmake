@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/eiger/learning/repositories/cmake/project/inc
 
-CXX_FLAGS = 
+CXX_FLAGS =  -std=c++20 -Wall -Werror -O3 -Wno-unknown-pragmas
 
