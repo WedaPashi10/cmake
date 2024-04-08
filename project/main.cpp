@@ -1,5 +1,6 @@
 #include <iostream>
+#include <utilities.h>
 
 int main(void) {
-    std::cout << "Hello, World!" << std::endl;
+    util::Hello();
 }
