@@ -6,11 +6,4 @@
  - Compile the project by running `cmake --build .` from `build` directory
  - Run the executable
 
-## Some syntactical info:
-
-#1 cmake_minimum_required:
-    This line specifies the minimum version of CMake required to run your `CMakeLists.txt` file.
-
-#2
-
 

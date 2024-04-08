@@ -12,6 +12,10 @@ set(SOURCES
     # Add more sources as you go
 )
 
+set(EXECUTABLE
+    a.out
+)
+
 include_directories(
     inc
     # Add more as you go
@@ -22,6 +26,12 @@ set(CMAKE_CXX_FLAGS
 )
 
 add_executable(
-    a.out
+    ${EXECUTABLE}
     ${SOURCES}
+)
+
+# Link with the required libraries
+target_link_libraries(${EXECUTABLE}
+    pthread 
+    rt
 )
