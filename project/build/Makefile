@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named jsonify
+
+# Build rule for target.
+jsonify: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 jsonify
+.PHONY : jsonify
+
+# fast build rule for target.
+jsonify/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/build
+.PHONY : jsonify/fast
+
+#=============================================================================
 # Target rules for targets named a.out
 
 # Build rule for target.
@@ -128,6 +141,30 @@ a.out: cmake_check_build_system
 a.out/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 .PHONY : a.out/fast
+
+jsonify/jsonify.o: jsonify/jsonify.cpp.o
+.PHONY : jsonify/jsonify.o
+
+# target to build an object file
+jsonify/jsonify.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/jsonify/jsonify.cpp.o
+.PHONY : jsonify/jsonify.cpp.o
+
+jsonify/jsonify.i: jsonify/jsonify.cpp.i
+.PHONY : jsonify/jsonify.i
+
+# target to preprocess a source file
+jsonify/jsonify.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/jsonify/jsonify.cpp.i
+.PHONY : jsonify/jsonify.cpp.i
+
+jsonify/jsonify.s: jsonify/jsonify.cpp.s
+.PHONY : jsonify/jsonify.s
+
+# target to generate assembly for a file
+jsonify/jsonify.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/jsonify/jsonify.cpp.s
+.PHONY : jsonify/jsonify.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -186,6 +223,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... a.out"
+	@echo "... jsonify"
+	@echo "... jsonify/jsonify.o"
+	@echo "... jsonify/jsonify.i"
+	@echo "... jsonify/jsonify.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

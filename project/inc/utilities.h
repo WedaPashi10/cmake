@@ -1,5 +1,5 @@
 #include <iostream>
 
 namespace util {
-    void Hello(void);
+    std::string Hello(void);
 }

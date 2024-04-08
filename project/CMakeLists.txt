@@ -18,11 +18,21 @@ set(EXECUTABLE
 
 include_directories(
     inc
+    jsonify
     # Add more as you go
 )
 
 set(CMAKE_CXX_FLAGS 
-    "${CMAKE_CXX_FLAGS} -std=c++20 -Wall -Werror -O3 -Wno-unknown-pragmas"
+    "${CMAKE_CXX_FLAGS} -Wall -Werror -O3 -Wno-unknown-pragmas"
+)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_library(jsonify 
+    STATIC 
+    jsonify/jsonify.cpp
 )
 
 add_executable(
@@ -30,8 +40,11 @@ add_executable(
     ${SOURCES}
 )
 
+
 # Link with the required libraries
-target_link_libraries(${EXECUTABLE}
+target_link_libraries(${EXECUTABLE} 
+    PUBLIC
+    jsonify
     pthread 
     rt
 )

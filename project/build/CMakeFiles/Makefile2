@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /home/eiger/learning/repositories/cmake/project/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/jsonify.dir/all
 all: CMakeFiles/a.out.dir/all
 .PHONY : all
 
@@ -71,14 +72,41 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/jsonify.dir/clean
 clean: CMakeFiles/a.out.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/jsonify.dir
+
+# All Build rule for target.
+CMakeFiles/jsonify.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eiger/learning/repositories/cmake/project/build/CMakeFiles --progress-num=4,5 "Built target jsonify"
+.PHONY : CMakeFiles/jsonify.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/jsonify.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eiger/learning/repositories/cmake/project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/jsonify.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eiger/learning/repositories/cmake/project/build/CMakeFiles 0
+.PHONY : CMakeFiles/jsonify.dir/rule
+
+# Convenience name for target.
+jsonify: CMakeFiles/jsonify.dir/rule
+.PHONY : jsonify
+
+# clean rule for target.
+CMakeFiles/jsonify.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/jsonify.dir/build.make CMakeFiles/jsonify.dir/clean
+.PHONY : CMakeFiles/jsonify.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/a.out.dir
 
 # All Build rule for target.
-CMakeFiles/a.out.dir/all:
+CMakeFiles/a.out.dir/all: CMakeFiles/jsonify.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/a.out.dir/build.make CMakeFiles/a.out.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/eiger/learning/repositories/cmake/project/build/CMakeFiles --progress-num=1,2,3 "Built target a.out"
@@ -86,7 +114,7 @@ CMakeFiles/a.out.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/a.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/eiger/learning/repositories/cmake/project/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/eiger/learning/repositories/cmake/project/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/a.out.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/eiger/learning/repositories/cmake/project/build/CMakeFiles 0
 .PHONY : CMakeFiles/a.out.dir/rule

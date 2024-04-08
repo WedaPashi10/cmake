@@ -1,0 +1,2 @@
+/usr/bin/ar qc libjsonify.a CMakeFiles/jsonify.dir/jsonify/jsonify.cpp.o
+/usr/bin/ranlib libjsonify.a

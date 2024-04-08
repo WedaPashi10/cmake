@@ -1,3 +1,4 @@
+/home/eiger/learning/repositories/cmake/project/build/CMakeFiles/jsonify.dir
 /home/eiger/learning/repositories/cmake/project/build/CMakeFiles/a.out.dir
 /home/eiger/learning/repositories/cmake/project/build/CMakeFiles/edit_cache.dir
 /home/eiger/learning/repositories/cmake/project/build/CMakeFiles/rebuild_cache.dir
