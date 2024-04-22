@@ -3,9 +3,6 @@
 #include "jsonify.h"
 
 int main(void) {
-    std::string key {"Welcome Message"};
-    std::string value {util::Hello()};
-    std::cout << createJsonString(key, value);
-
+    std::cout << createJsonString("Welcome Message", util::Hello());
     return EXIT_SUCCESS;
 }
